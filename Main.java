@@ -21,15 +21,54 @@ public class Main
       System.out.println("Sum is " + sum);
     }
 
-
+    int nums;
     System.out.println("Enter the amount of numbers you want to input: ");
-    int input = scan.nextInt();
-    int nums = 0; 
-    
-    if (input > Integer.MAX_VALUE())
+    nums = scan.nextInt();
+
+    int counter = 0;
+    int userInput;
+    int max=0;
+    while (counter < nums)
     {
-      
+      userInput = scan.nextInt();
+      if (max < userInput)
+      {
+        max = userInput;
+      }
+      counter ++;
     }
+    
+    System.out.println("The largest score is " + max);
+    
+   
+   String user;
+   System.out.println("Enter a word");
+   user= scan.next();
+
+   int index = 0;
+   int threeCounter = 1;
+   String currentLetter = "";
+   while (index < user.length())
+   {
+
+ 
+
+    if (threeCounter == 3)
+    {
+      threeCounter = 1;
+      index++;
+    }
+    else
+    {
+     currentLetter = user.substring(index, index + 1);
+    }
+   threeCounter++; 
+    System.out.println(currentLetter);
+   }
+
+
+
+
 
     scan.close();
 
